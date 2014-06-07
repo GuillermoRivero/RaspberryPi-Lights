@@ -1,0 +1,54 @@
+#textareas{
+ padding-left: 20px;
+}
+
+.divdoble {
+  margin-top:5px;
+  width: 100%;
+  float: left;
+}
+
+.divdoble .divizq {
+  width: 70%;
+  float:left;
+}
+
+strong{
+  color: #28a8df;
+  font-weight:bold;
+ }
+
+.codeArea{
+  background: #B1B1B1;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  overflow:auto;
+}
+
+.textos {
+  width: 100%;
+}
+
+.textos p{
+ margin-right:25px;
+}
+
+.divdoble .divdcha {
+  width: 30%;
+  float:left;
+}
+
+.divdoble .divdcha img{
+    width: 100%;
+    height:auto;
+}
+
+ul{
+   margin-left:45px;
+}
+
+.important{
+  font-weight:bold;
+  color:red;
+}

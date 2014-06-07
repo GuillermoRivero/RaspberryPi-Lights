@@ -1,0 +1,11 @@
+<div id="content">
+	<link rel="stylesheet" href="/css/luces.css">
+	<div id="info">
+		<h1>Juega con las luces</h1>
+		<button id="encender" class="button" type="button">Encender</button>
+		<button id="apagar" class="button" type="button">Apagar</button>
+	</div>
+</div>
+
+<script type="text/javascript" src="/javascript/scssParserUtilities.js"></script>
+

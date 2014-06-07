@@ -1,0 +1,12 @@
+<div id="content">
+	<link rel="stylesheet" href="/css/luces.css">
+	<div id="info">
+		<h1>Juega con las luces</h1>
+	</div>
+</div>
+
+<script type="text/javascript" src="/javascript/scssParserUtilities.js"></script>
+<script type="text/javascript" src="/javascript/scssFunctions.js"></script>
+<script type="text/javascript" src="/javascript/scss.js"></script>
+<script type="text/javascript" src="/javascript/main.js"></script>
+<script type="text/javascript" src="/javascript/scssParserUtilities.js"></script>

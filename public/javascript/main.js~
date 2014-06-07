@@ -1,0 +1,14 @@
+$(document).ready(function() {
+
+	$('#Encender').click(function() {
+   
+	});  
+
+	$('#Apagar').click(function() {
+	
+	});
+
+
+});
+
+
