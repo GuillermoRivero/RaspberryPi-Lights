@@ -2,7 +2,7 @@ $:.unshift "."
 require 'sinatra'
 require "sinatra/reloader" if development?
 require 'sinatra/flash'
-require 'pi_piper'
+load 'pi_piper'
 
 #include PiPiper
 

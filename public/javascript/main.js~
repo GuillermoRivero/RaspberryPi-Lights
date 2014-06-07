@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
 	$('#encender').click(function() {
-   
+   		//Animaciones de encendido
 	});  
 
 	$('#apagar').click(function() {
-	
+		//Animaciones de apagado
 	});
-
 
 });
 

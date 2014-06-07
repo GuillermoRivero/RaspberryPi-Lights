@@ -5,7 +5,7 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "sinatra-flash"
 gem "thin"
-gem "pi_piper"
+gem "pi-pipper"
 
 group :development do
   gem 'dm-sqlite-adapter'
