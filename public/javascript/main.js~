@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	$('#Encender').click(function() {
+	$('#encender').click(function() {
    
 	});  
 
-	$('#Apagar').click(function() {
+	$('#apagar').click(function() {
 	
 	});
 
