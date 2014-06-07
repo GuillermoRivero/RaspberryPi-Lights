@@ -2,15 +2,15 @@ $:.unshift "."
 require 'sinatra'
 require "sinatra/reloader" if development?
 require 'sinatra/flash'
-load 'pi_piper'
+#require 'pi_piper'
 
 #include PiPiper
 
-set :bind, '0.0.0.0'
-set :port, 80
+#set :bind, '0.0.0.0'
+#set :port, 80
 
-pinLuz = PiPiper::Pin.new(:pin => 14, :direction => :out)
-pinLuz.on
+#pinLuz = PiPiper::Pin.new(:pin => 24, :direction => :out)
+#pinLuz.on
 
 
 helpers do
@@ -28,11 +28,11 @@ get '/luces' do
 end
 
 get '/encender' do
-  pinLuz.off
+#  pinLuz.off
   erb :luces
 end
 
 get '/apagar' do
-  pinLuz.on
+#  pinLuz.on
   erb :luces
 end

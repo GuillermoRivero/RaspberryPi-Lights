@@ -8,12 +8,31 @@
   float:left;
 }
 
+a { 
+	border-radius: 15px;
+	border: none;
+	color: #fff; 
+	font-weight: bold;
+	cursor: pointer; 
+	text-decoration: none;
+}
+
+a:hover { 
+	border-radius: 15px;
+	border: none;
+	color: #fff; 
+	font-weight: bold;
+	cursor: pointer; 
+	text-decoration: none;
+}
+
 .button {
   border-radius: 15px;
   border: none;
   padding: 10px;
   font-weight: bold;
   background-color: #bb1143;
+  text-shadow: 2px 2px 5px #FF84A9;
   color: #fff;
 }
 

@@ -1,11 +1,10 @@
 
 <div id="content">
 	<link rel="stylesheet" href="/css/luces.css">
-	<div id="info">
-		<h1>Juega con las luces</h1>
+	<div id="info">		
 		<br>
-		<button id="encender" class="button" type="button">Encender</button>
-		<button id="apagar" class="button" type="button">Apagar</button>
+		<button id="wipe" class="button" type="button" onclick="window.location.href='/encender'">Encender</button>
+		<button id="wipe" class="button" type="button" onclick="window.location.href='/apagar'">Apagar</button>
 	</div>
 </div>
 

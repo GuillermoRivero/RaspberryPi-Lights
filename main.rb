@@ -4,12 +4,12 @@ require "sinatra/reloader" if development?
 require 'sinatra/flash'
 require 'pi_piper'
 
-#include PiPiper
+include PiPiper
 
 set :bind, '0.0.0.0'
 set :port, 80
 
-pinLuz = PiPiper::Pin.new(:pin => 14, :direction => :out)
+pinLuz = PiPiper::Pin.new(:pin => 24, :direction => :out)
 pinLuz.on
 
 
