@@ -1,9 +1,29 @@
-aklsdjhklajdjkaljkdlsjkfakjlsdjkldfjklajklajkladsjklfa
-adf5d
-sa
-f
-adsd
-fa
-f
-d
-fafdafds
+<div id="content">
+	<link rel="stylesheet" href="/css/index.css">
+
+	<div id="textareas" class="divdoble">
+		<div class="divizq">
+			<div class="textos">
+                             <h1>¿En que consiste el proyecto?</h1>
+			     <p>Este proyecto consiste en una página web que utiliza como servidor una RaspberryPi conectada a un servo. De manera que cuando algún usuario interactue con la web podrá modificar el estado de los pines GPIO de la RaspberryPi y por lo tanto, cerrar o abrir el interruptor del servo, y con ello encender o apagar la luz.</p><br>
+			     <h1>¿Puedo utilizar este proyecto en mi RaspberryPi?</h1>  
+			     <p>Por supuesto, para ello solo tienes que <a href="https://github.com/alu0100702149/RaspberryPi-Lights/archive/master.zip"  target="_blank">descargar el proyecto</a>, o si lo prefieres puedes hacer un Fork en github. Una vez tengas el proyecto en tu raspberryPi, entra a a carpeta contenedora y utiliza el siguiente comando:</p><br>
+			     <p>Con ello, habrás conseguido instalar todas las gemas necesarias para ejecutar el proyecto. Es necesario que sepas que debes tener instalada en la raspberry la version 2.0.0 de ruby.</p><br>
+			     <h1>Ya tengo el proyecto, ¿Qué más necesito?</h1>
+			     <p>Está claro que sólo con código no vas a conseguir encender y apagar las luces, necesitas comprar algunos materiales y montar algo de circuiteria. Para este proyecto necesitaras lo siguiente:</p><br>
+			     <ul>
+				<li>Una RaspberryPi</li>
+				<li>Un servo</li>
+				<li>Un conversor de niveles lógicos</li>
+				<li>Una protoboard</li>
+				<li>Unos cuantos cables para hacer conexiones</li>
+			     </ul><br>
+			     <h1>Tengo todos los cacharros en casa pero, ¿Qué tengo que hacer con ellos?</h1>
+			     <p>Ahora que tienes todo lo necesario, es la hora de unir cables, si no tienes muy claro como hacerlo, puedes seguir el siguiente esquema:</p><br>
+			     <div class="zoomTarget"><img src="/images/circuitos/circuito1_trans.png" title="Circuito" heigth=50% width=50% align="center"/></div><br>
+			</div>		
+		</div>
+	</div>
+</div>
+
+<script src="/zoomooz/jquery.zoomooz.min.js"></script>

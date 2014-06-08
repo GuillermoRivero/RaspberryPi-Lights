@@ -6,17 +6,28 @@ require 'sinatra/flash'
 
 #include PiPiper
 
-#set :bind, '0.0.0.0'
-#set :port, 80
+set :bind, '0.0.0.0'
+set :port, 80
 
 #pinLuz = PiPiper::Pin.new(:pin => 24, :direction => :out)
 #pinLuz.on
 
+$encendida = false;
 
 helpers do
   def current?(path='/')
     (request.path==path || request.path==path+'/') ? 'class = "current"' : ''
   end
+
+  def estaEncendida?()
+        if $encendida
+		return "<div class=\"zoomTarget\"><img src=\"/images/recursos/bombilla_encendida.png\" title=\"Bombilla encendida\" heigth=50% width=50% align=\"center\"/></div>"
+		
+	else
+		return "<div class=\"zoomTarget\"><img src=\"/images/recursos/bombilla_apagada.png\" title=\"Bombilla apagada\" heigth=50% width=50% align=\"center\"/></div>"
+	end
+  end 
+
 end
 
 get '/' do
@@ -27,12 +38,14 @@ get '/luces' do
   erb :luces
 end
 
-get '/encender' do
-#  pinLuz.off
+get '/luces/:estado' do
+  if params[:estado] == ':encender'
+		$encendida = true;
+  else
+		$encendida = false;
+  end
   erb :luces
+
 end
 
-get '/apagar' do
-#  pinLuz.on
-  erb :luces
-end
+

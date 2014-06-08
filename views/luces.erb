@@ -1,12 +1,22 @@
 
 <div id="content">
 	<link rel="stylesheet" href="/css/luces.css">
-	<div id="info">
-		<h1>Prueba las luces</h1>		
-		<br>
-		<button id="wipe" class="button" type="button" onclick="window.location.href='/encender'">Encender</button>
-		<button id="wipe" class="button" type="button" onclick="window.location.href='/apagar'">Apagar</button>
+
+	<div id="textareas" class="divdoble">
+		<div class="divizq">
+			<div id="info">
+				<h1>Prueba las luces</h1>		
+				<br>
+				<button id="wipe" class="button" type="button" onclick="window.location.href='/luces/:encender'">Encender</button>
+				<button id="wipe" class="button" type="button" onclick="window.location.href='/luces/:apagar'">Apagar</button>
+			</div>
+		</div>
+		<div class="divdcha">
+	     		<%=estaEncendida?()%>
+		</div>
 	</div>
 </div>
 
+
+<script src="/zoomooz/jquery.zoomooz.min.js"></script>
 

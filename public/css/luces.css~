@@ -8,12 +8,23 @@
   float:left;
 }
 
+.divdoble .divdcha {
+  width: 30%;
+  float:left;
+}
+
+.divdoble .divdcha img{
+    width: 100%;
+    height:auto;
+}
+
 .button {
   border-radius: 15px;
   border: none;
   padding: 10px;
   font-weight: bold;
   background-color: #bb1143;
+  text-shadow: 2px 2px 5px #FF84A9;
   color: #fff;
 }
 

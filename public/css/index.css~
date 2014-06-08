@@ -16,15 +16,7 @@
 strong{
   color: #28a8df;
   font-weight:bold;
- }
-
-.codeArea{
-  background: #B1B1B1;
-  padding: 10px;
-  color: white;
-  border-radius: 10px;
-  overflow:auto;
-}
+ } 
 
 .textos {
   width: 100%;
