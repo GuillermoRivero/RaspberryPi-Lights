@@ -7,7 +7,7 @@ require 'sinatra/flash'
 #include PiPiper
 
 set :bind, '0.0.0.0'
-set :port, 80
+#set :port, 80
 
 #pinLuz = PiPiper::Pin.new(:pin => 24, :direction => :out)
 #pinLuz.on
@@ -40,9 +40,11 @@ end
 
 get '/luces/:estado' do
   if params[:estado] == ':encender'
-		$encendida = true;
+		$encendida = true
+		#pinLuz.off
   else
-		$encendida = false;
+		$encendida = false
+		#pinLuz.on
   end
   erb :luces
 

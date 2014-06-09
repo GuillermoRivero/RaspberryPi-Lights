@@ -13,7 +13,7 @@
 		
 	
 		<!-- SCRIPTS -->
-                
+                <script src="/zoomooz/jquery.zoomooz.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<!-- HTML 5 ENABLING SCRIPT -->
 		<!--[if lt IE 9]>
@@ -25,6 +25,7 @@
 
 	<body>
 		<!-- Begin Header -->
+	<div class="zoomContainer">
 		<header>
 			<div id="header_contenido">			 
 				<div id="logo_contenedor">			 
@@ -37,7 +38,7 @@
 							<ul>
 							   <li><a href="/" title="Inicio" rel=""><span>Inicio</span></a></li>
 							   <li><a href='/luces'><span>Try it!</span></a></li>
-							   <li><a href='https://github.com/alu0100702149/luces' target="_blank"><span>Ver el proyecto en GitHub</span></a></li>
+							   <li><a href='https://github.com/alu0100702149/RaspberryPi-Lights' target="_blank"><span>Ver el proyecto en GitHub</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -64,5 +65,6 @@
 		</div>
                 </footer>
            <!-- End Footer -->
+	</div>
 	</body>
 </html>	

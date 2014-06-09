@@ -1,13 +1,17 @@
 $(document).ready(function() {
 
-	$('#encender').click(function() {
-   		//Animaciones de encendido
-	});  
+	
 
-	$('#apagar').click(function() {
-		//Animaciones de apagado
-	});
 
 });
 
+function comprobarEstado(){
+
+		if($("#estado").val == "encender"){
+			window.location.replace('/luces/:encender');
+		}
+		if($("#estado").val == "apagar"){
+			window.location.replace('/luces/:apagar');
+		}
+};  
 
