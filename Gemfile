@@ -12,8 +12,4 @@ group :development do
   gem 'do_sqlite3'
 end
 
-#bundle install --without production
-group :production do
-  gem 'pg'
-  gem 'dm-postgres-adapter' 
-end
+

@@ -11,9 +11,9 @@
 				<button id="wipe" class="button" type="button" onclick="window.location.href='/luces/:apagar'">Apagar</button>
 
 				<br><br>
-				<h1>Prueba a hablarle al ordenador</h1>		
-				<br>
-				<input type="text" x-webkit-speech id="estado" onwebkitspeechchange="comprobarEstado()">
+
+				<%=reconocimientoVoz?()%>				
+				
 			</div>
 		</div>
 		<div class="divdcha">
@@ -24,4 +24,5 @@
 
 
 <script src="/zoomooz/jquery.zoomooz.min.js"></script>
-
+<script src="/annyang/annyang.min.js"></script>
+<script src="/javascript/funcionesVoz.js"></script>

@@ -5,15 +5,12 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "sinatra-flash"
 gem "thin"
-gem "pi-pipper"
+gem "pi_piper"
+gem "certified"
 
 group :development do
   gem 'dm-sqlite-adapter'
   gem 'do_sqlite3'
 end
 
-#bundle install --without production
-group :production do
-  gem 'pg'
-  gem 'dm-postgres-adapter' 
-end
+

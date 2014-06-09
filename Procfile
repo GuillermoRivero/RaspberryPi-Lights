@@ -1,1 +1,2 @@
-web: bundle exec rackup config.ru -p $PORT
+web: rake
+ssh: rake ssh

@@ -1,0 +1,5 @@
+#Certificado shh y clave
+
+*.crt
+*.pem
+*~

@@ -3,6 +3,11 @@ task :default do
   sh "rvmsudo ruby main.rb"
 end
 
+desc "Iniciar HTTPS"
+task :ssh do 
+  sh "rvmsudo ruby main-ssh.rb"
+end
+
 desc "Commit changes"
 task :ci, [ :message ] => :keep_secrets do |t, args|
   message = args[:message] || ''

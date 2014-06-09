@@ -2,6 +2,7 @@ $:.unshift "."
 require 'sinatra'
 require "sinatra/reloader" if development?
 require 'sinatra/flash'
+require './sinatra_ssl'
 require 'pi_piper'
 
 include PiPiper
@@ -9,13 +10,14 @@ include PiPiper
 set :bind, '0.0.0.0'
 set :port, 80
 
+set :ssl_certificate, "cert.crt"
+set :ssl_key, "pkey.pem"
+set :port, 9999
+
 pinLuz = PiPiper::Pin.new(:pin => 24, :direction => :out)
 pinLuz.on
 
 $encendida = false;
-
-
-
 
 
 helpers do
