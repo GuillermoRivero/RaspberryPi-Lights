@@ -42,6 +42,11 @@ get '/luces' do
   erb :luces
 end
 
+get '/luces/estado' do
+	content_type :json
+	{valor: $encendida}.to_json
+end
+
 get '/luces/:estado' do
   if params[:estado] == ':encender'
 		$encendida = true
