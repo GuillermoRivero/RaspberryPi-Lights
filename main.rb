@@ -44,7 +44,7 @@ get '/luces' do
 end
 
 get '/luces/estado' do
-	content_type :json
+	content_type 'text/xml'
 	{valor: $encendida}.to_json
 end
 
