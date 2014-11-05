@@ -43,7 +43,13 @@
 						</div>
 					</div>
 				</nav>
-				<!-- End Menu -->	
+				<!-- End Menu -->
+				<div class="header_auth">
+	     			<%=inSession?()%>
+				</div>	
+				<div class="oauths">
+					<a href="/auth/google_oauth2" title="Google" <%=current?("/auth/google_oauth2")%>> <img alt="Google" src="/images/google.png"></a>
+					</div>
 				<div class="clearing"></div>				
 			</div>
 		</header>

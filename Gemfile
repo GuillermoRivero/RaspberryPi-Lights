@@ -6,6 +6,8 @@ gem "sinatra-contrib"
 gem "sinatra-flash"
 gem "json"
 gem "thin"
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 gem "pi_piper"
 
 group :development do
