@@ -32,9 +32,9 @@ helpers do
 
   def inSession?()
         if session[:auth] # authenticated
-		"<img class=\"borderradius\" src=\"#{session[:image]}\" width=\"35\" height=\"35\"> Logueado como <b>#{session[:name]}</b>. ¿Cambiar cuenta?"
+		"<img class=\"borderradius\" src=\"#{session[:image]}\" width=\"35\" height=\"35\"> Bienvenido <b>#{session[:name]}</b>. Pulse en el icono de <b>Google</b> para cambiar de cuenta."
 	else
-		"Identificate como, <b>administrador</b> para poder moficar el estado de las luces"
+		"<a href=\"/auth/google_oauth2\">Indentifiquese como <b>administrador</b></a> para apagar y encender las luces fisicamente"
 	end
   end 
 
@@ -63,15 +63,18 @@ get '/luces/estado' do
 end
 
 get '/luces/:estado' do
-	if session[:name] == $administrador
+	
 	  if params[:estado] == ':encender'
 			$encendida = true
-			pinLuz.off
+			if session[:name] == $administrador
+				pinLuz.off
+			end
 	  else
 			$encendida = false
-			pinLuz.on
+			if session[:name] == $administrador
+				pinLuz.on
+			end
 	  end
-	end
   erb :luces
 
 end

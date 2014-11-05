@@ -43,10 +43,7 @@
 					</div>
 				</nav>
 				<!-- End Menu -->
-				<div class="header_auth">
-	     			<%=inSession?()%>
-				</div>	
-
+				
 				<div class="clearing"></div>				
 			</div>
 		</header>
@@ -55,9 +52,6 @@
 
 		<!-- Begin Wrapper -->
 		<div id="wrapper">
-			<div class="oauths">
-					<a href="/auth/google_oauth2" title="Google" <%=current?("/auth/google_oauth2")%>> <img alt="Google" src="/images/recursos/google.png"></a>
-			</div>
 			<section>
 				<%= yield %>
 			</section>
@@ -67,9 +61,15 @@
            <!-- Begin Footer -->
 		<footer>
 		<div id="footer_contenido">
-		Este proyecto ha sido desarrollado por <a href="mailto:guillermotegueste@gmail.com?subject=Luces RaspberryPi" target="">Guillermo Rivero Rodriguez</a>. Quiero agradecer a <a href="mailto:bowasiel@gmail.com?subject=Luces RaspberryPi"> Boris Ballester Hernández</a> por la ayuda en el diseño de la Web y el CSS. <br>Todos los derechos reservados®.
+		Este proyecto ha sido desarrollado por <a href="mailto:guillermotegueste@gmail.com?subject=Luces RaspberryPi" target="">Guillermo Rivero Rodriguez</a>. Quiero agradecer a <a href="mailto:bowasiel@gmail.com?subject=Luces RaspberryPi"> Boris Ballester Hernández</a> por la ayuda en el diseño de la Web y el CSS. <br>Todos los derechos reservados®.<br>
+		<div class="oauth">
+		<%=inSession?()%><a href="/auth/google_oauth2" title="Google" <%=current?("/auth/google_oauth2")%>> <img alt="Google" src="/images/recursos/google.png"></a>
 		</div>
-                </footer>
+		</div>
+		
+			
+		
+        </footer>
            <!-- End Footer -->
 
 	</body>

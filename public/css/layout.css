@@ -171,6 +171,11 @@ header {
 	border-bottom-color:#999;	
 }
 
+.oauth{
+	-webkit-transform: translate(0px,-15px);
+	margin-bottom: 10px;
+}
+
 #header_contenido{
 	margin: 0 auto;
 	min-width:1150px;
