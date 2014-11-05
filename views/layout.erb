@@ -30,6 +30,9 @@
 				<div id="logo_contenedor">			 
 					<a href="/"><img src="/images/logo/logo-texto.png" title="RasperryPi Lights"/></a>
 				</div>
+				<div class="oauths">
+					<a href="/auth/google_oauth2" title="Google" <%=current?("/auth/google_oauth2")%>> <img alt="Google" src="/images/recursos/google.png"></a>
+				</div>
 				<!-- Begin Menu -->
 				<nav>	
 					<div id="menu_contenido">		
@@ -46,9 +49,6 @@
 				<div class="header_auth">
 	     			<%=inSession?()%>
 				</div>	
-				<div class="oauths">
-					<a href="/auth/google_oauth2" title="Google" <%=current?("/auth/google_oauth2")%>> <img alt="Google" src="/images/recursos/google.png"></a>
-					</div>
 				<div class="clearing"></div>				
 			</div>
 		</header>

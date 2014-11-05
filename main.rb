@@ -15,6 +15,7 @@ pinLuz.on
 enable :sessions
 set :session_secret, '*&(^#234)'
 set :reserved_words, %w{grammar test login auth}
+$administrador = 'Guillermo Rivero'
 
 #Sinatra
 set :bind, '0.0.0.0'
@@ -31,9 +32,9 @@ helpers do
 
   def inSession?()
         if session[:auth] # authenticated
-		"<img class=\"borderradius\" src=\"#{session[:image]}\" width=\"35\" height=\"35\"> Authenticated as <b>#{session[:name]}</b>. Want to login with another account?"
+		"<img class=\"borderradius\" src=\"#{session[:image]}\" width=\"35\" height=\"35\"> Logueado como <b>#{session[:name]}</b>. ¿Cambiar cuenta?"
 	else
-		"Please, <b>sign in</b> for saving your files"
+		"Identificate como, <b>administrador</b> para poder moficar el estado de las luces"
 	end
   end 
 
@@ -62,7 +63,7 @@ get '/luces/estado' do
 end
 
 get '/luces/:estado' do
-	if session[:name] == 'Guillermo Rivero'
+	if session[:name] == $administrador
 	  if params[:estado] == ':encender'
 			$encendida = true
 			pinLuz.off
