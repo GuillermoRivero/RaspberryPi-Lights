@@ -32,7 +32,7 @@ helpers do
 
   def inSession?()
         if session[:auth] # authenticated
-		"<img class=\"borderradius\" src=\"#{session[:image]}\" width=\"35\" height=\"35\"> Bienvenido <b>#{session[:name]}</b>. Pulse en el icono de <b>Google</b> para cambiar de cuenta."
+		"Bienvenido a Raspberry Pi Lights <b>#{session[:name]}</b>. <img class=\"borderradius\" src=\"#{session[:image]}\" width=\"35\" height=\"35\"> Pulse en el icono de <b>Google</b> para cambiar de cuenta."
 	else
 		"<a href=\"/auth/google_oauth2\">Indentifiquese como <b>administrador</b></a> para apagar y encender las luces fisicamente"
 	end
