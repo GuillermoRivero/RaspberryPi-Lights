@@ -63,18 +63,15 @@ get '/luces/estado' do
 end
 
 get '/luces/:estado' do
-	
-	  if params[:estado] == ':encender'
+	if session[:name] == $administrador
 			$encendida = true
-			if session[:name] == $administrador
-				pinLuz.off
+			pinLuz.off
 			end
 	  else
 			$encendida = false
-			if session[:name] == $administrador
-				pinLuz.on
-			end
-	  end
+			pinLuz.on
+		end
+	end
   erb :luces
 
 end
