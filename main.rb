@@ -63,11 +63,10 @@ get '/luces/estado' do
 end
 
 get '/luces/:estado' do
-	if session[:name] == $administrador
-			$encendida = true
+	if session[:name] == $administrador	
+		if $encendida = true
 			pinLuz.off
-			end
-	  else
+		else
 			$encendida = false
 			pinLuz.on
 		end
