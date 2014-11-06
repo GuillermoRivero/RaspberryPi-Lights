@@ -81,7 +81,7 @@ get '/luces/:estado:pass?' do
 end
 
 get '/luces/:estado' do
-	if session[:name] == $administrador	
+	#if session[:name] == $administrador	
 		if params[:estado] == ':encender'
 			$encendida = true
 			pinLuz.off
@@ -89,7 +89,7 @@ get '/luces/:estado' do
 			$encendida = false
 			pinLuz.on
 		end
-	end
+	#end
   erb :luces
 
 end
