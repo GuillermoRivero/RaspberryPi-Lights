@@ -66,7 +66,8 @@ end
 
 get '/luces/:estado' do
 	if session[:name] == $administrador	
-		if $encendida = true
+		if estado == "encender"
+			$encendida = true
 			pinLuz.off
 		else
 			$encendida = false
