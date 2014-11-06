@@ -12,14 +12,6 @@ get '/auth/:name/callback' do
   session[:name] = @auth['info'].name
   session[:image] = @auth['info'].image
 
-  puts "params = #{params}"
-  puts "@auth.class = #{@auth.class}"
-  puts "@auth info = #{@auth['info']}"
-  puts "@auth info class = #{@auth['info'].class}"
-  puts "@auth info name = #{@auth['info'].name}"
-  puts "@auth info email = #{@auth['info'].email}"
-
-  # flash[:notice] =  %Q{<div class="success">Authenticated as <b>#{@auth['info'].name}.</b></div>}
   redirect '/'
 end
 

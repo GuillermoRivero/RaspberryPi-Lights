@@ -24,7 +24,8 @@ set :port, 80
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 #Variables estado
-$encendida = false;
+$encendida = false
+$pass = 'password'
 
 
 helpers do
@@ -62,6 +63,21 @@ end
 get '/luces/estado' do
 	content_type :json
 	{valor: $encendida}.to_json
+end
+
+get '/luces/:estado:pass?' do
+	if params[:pass] == $pass
+		if params[:estado] == ':encender' #Cambiar por un switch para evitar que se apague la bombilla en caso de un parametro incorrecto
+			$encendida = true
+			pinLuz.off
+		else
+			$encendida = false
+			pinLuz.on
+		end
+	end
+  erb :luces
+
+
 end
 
 get '/luces/:estado' do
