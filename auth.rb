@@ -7,6 +7,7 @@ use OmniAuth::Builder do
 end
 
 get '/auth/:name/callback' do
+  
   session[:auth] = @auth = request.env['omniauth.auth']
   session[:name] = @auth['info'].name
   session[:image] = @auth['info'].image
