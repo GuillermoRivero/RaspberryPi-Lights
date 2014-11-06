@@ -21,6 +21,8 @@ $administrador = 'Guillermo Rivero'
 set :bind, '0.0.0.0'
 set :port, 80
 
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
 #Variables estado
 $encendida = false;
 
