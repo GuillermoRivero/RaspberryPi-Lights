@@ -12,13 +12,49 @@ $(document).ready(function() {
 });
 
 function encender() {
-	      console.log("Encendiendo luces");
-	      window.location.replace('/luces/:encender');
+	    $.get("/usuario", function(data){
+			usuario = data.usuario;
+		});
+
+		$.post("/luces/accion",{
+			estado:"encender",
+		    usuario: usuario
+		}, function(data){
+			if(data.permisos == "ADMINISTRADOR"){
+				privilegio = true;
+			}else{
+				privilegio = false;
+			}
+		}).done(function(){
+			if(privilegio == true){
+				$("#bombilla")[0].src = "/images/recursos/bombilla_encendida.png";
+			}
+		}).fail(function(){
+			alert("Fallo al conectar al servidor");
+		});
 }
 
 function apagar() {
-	      console.log("Apagando luces");
-	      window.location.replace('/luces/:apagar');
+	    $.get("/usuario", function(data){
+			usuario = data.usuario;
+		});
+
+		$.post("/luces/accion",{
+		      estado:"apagar",
+		      usuario: usuario
+		}, function(data){
+			if(data.permisos == "ADMINISTRADOR"){
+				privilegio = true;
+			}else{
+				privilegio = false;
+			}
+		}).done(function(){
+			if(privilegio == true){
+				$("#bombilla")[0].src = "/images/recursos/bombilla_apagada.png";
+			}
+		}).fail(function(){
+			alert("Fallo al conectar al servidor");
+		});
 }
 
 
