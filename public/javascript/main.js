@@ -2,7 +2,23 @@ var usuario = "";
 var privilegio = false;
 
 $(document).ready(function() {
-	$("#divBombilla").append("<img id=\"bombilla\" src=\"/images/recursos/bombilla_encendida.png\" title=\"Bombilla encendida\" heigth=50% width=50% align=\"center\"/>");
+
+	estadoLuces = ""
+
+	$.get("/luces/estado", function(data){
+			estadoLuces = data.valor;
+		});
+
+	switch(estadoLuces){
+		case true:
+			$("#divBombilla").append("<img id=\"bombilla\" src=\"/images/recursos/bombilla_encendida.png\" title=\"Bombilla encendida\" heigth=50% width=50% align=\"center\"/>");
+		break;
+		case false:
+			$("#divBombilla").append("<img id=\"bombilla\" src=\"/images/recursos/bombilla_apagada.png\" title=\"Bombilla encendida\" heigth=50% width=50% align=\"center\"/>");
+		break;
+		default:
+			$("#divBombilla").append("<img id=\"bombilla\" src=\"/images/recursos/bombilla_apagada.png\" title=\"Bombilla encendida\" heigth=50% width=50% align=\"center\"/>");
+	}
 	
 	$("#encender").click(function() {
 

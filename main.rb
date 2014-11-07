@@ -80,7 +80,7 @@ post '/luces/accion' do
 	@estado = params["estado"];
 	@usuario = params["usuario"];
 	if @usuario == $pass
-		if @estado == ':encender'
+		if @estado == 'encender'
 			$encendida = true
 			pinLuz.off
 		else
