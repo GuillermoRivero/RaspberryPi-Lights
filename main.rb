@@ -26,20 +26,12 @@ set :port, 80
 
 #Variables estado
 $encendida = false
-$pass = 'password'
+$pass = 'Guillermo Rivero'
 
 
 helpers do
   def current?(path='/')
     (request.path==path || request.path==path+'/') ? 'class = "current"' : ''
-  end
-
-  def encender?()
-    
-  end
-
-  def apagar?()
-    
   end
 
   def inSession?()
@@ -95,7 +87,7 @@ post '/luces/accion' do
 			$encendida = false
 			pinLuz.on
 		end
-		return {permisos: "ADMINISTRADOR"}.to
+		return {permisos: "ADMINISTRADOR"}.to_json
 	else
 		return {permisos: "NO_ADMINISTRADOR"}.to_json
 	end
