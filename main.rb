@@ -16,12 +16,13 @@ enable :sessions
 set :session_secret, '*&(^#234)'
 set :reserved_words, %w{grammar test login auth}
 $administrador = 'Guillermo Rivero'
+$estado = "encender";
 
 #Sinatra
 set :bind, '0.0.0.0'
 set :port, 80
 
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+#OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
 #Variables estado
 $encendida = false
@@ -31,6 +32,14 @@ $pass = 'password'
 helpers do
   def current?(path='/')
     (request.path==path || request.path==path+'/') ? 'class = "current"' : ''
+  end
+
+  def encender?()
+    
+  end
+
+  def apagar?()
+    
   end
 
   def inSession?()
@@ -65,33 +74,32 @@ get '/luces/estado' do
 	{valor: $encendida}.to_json
 end
 
-get '/luces/:estado:pass?' do
-	if params[:pass] == $pass
-		if params[:estado] == ':encender' #Cambiar por un switch para evitar que se apague la bombilla en caso de un parametro incorrecto
-			$encendida = true
-			pinLuz.off
-		else
-			$encendida = false
-			pinLuz.on
-		end
+get '/usuario' do
+	content_type :json
+	@usuario = "not_logged"
+	if session[:auth]
+		@usuario = session[:name]
 	end
-  erb :luces
-
-
+	{usuario: @usuario}.to_json
 end
 
-get '/luces/:estado' do
-	#if session[:name] == $administrador	
-		if params[:estado] == ':encender'
+post '/luces/accion' do	
+	content_type :json
+	@estado = params["estado"];
+	@usuario = params["usuario"];
+	if @usuario == $pass
+		if @estado == ':encender'
 			$encendida = true
 			pinLuz.off
 		else
 			$encendida = false
 			pinLuz.on
 		end
-	#end
-  erb :luces
-
+		return {permisos: "ADMINISTRADOR"}.to
+	else
+		return {permisos: "NO_ADMINISTRADOR"}.to_json
+	end
 end
+
 
 

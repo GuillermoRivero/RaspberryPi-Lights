@@ -3,7 +3,7 @@ require 'omniauth-google-oauth2'
 
 use OmniAuth::Builder do
   google_config = YAML.load_file 'config/google_config.yml'
-  provider :google_oauth2, google_config['identifier']#, google_config['secret'], {:client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}}}
+  provider :google_oauth2, google_config['identifier'], google_config['secret']#, {:client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}}}
 end
 
 get '/auth/:name/callback' do
